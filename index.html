@@ -7,6 +7,33 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+        /* 为中等屏幕设备设置字体大小 */
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .header1 {
+                font-size: 3.5vw; /* 调整中等屏幕的字体大小 */
+            }
+            .header2 {
+                font-size: 2vw; /* 调整中等屏幕的字体大小 */
+            }
+            .footer {
+                font-size: 1.75vw; /* 调整中等屏幕的字体大小 */
+            }
+        }
+
+        /* 为小屏幕设备设置字体大小 */
+        @media screen and (max-width: 767px) {
+            .header1 {
+                font-size: 5vw; /* 调整小屏幕的字体大小 */
+            }
+            .header2 {
+                font-size: 3vw; /* 调整小屏幕的字体大小 */
+            }
+            .footer {
+                font-size: 2.5vw; /* 调整小屏幕的字体大小 */
+            }
+        }
+
+
         body, html {
             margin: 0;
             padding: 0;
@@ -30,47 +57,50 @@
         }
 
         .profile-pic {
-            width: 120px; /* 调整为所需尺寸 */
-            height: 120px;
+            width: 15vw; /* 使用视口单位 */
+            height: 15vw; /* 使用视口单位 */
+            max-width: 120px; /* 限制最大宽度 */
+            max-height: 120px; /* 限制最大高度 */
+            min-width: 60px; /* 限制最小宽度 */
+            min-height: 60px; /* 限制最小高度 */
             border-radius: 50%;
             background: url('images/head.jpg') no-repeat center;
             background-size: cover;
-            /*border: 3px solid white; 可选：为头像添加边框 */
-            margin-top: 60px; /* 使头像部分显示在背景区域上方 */
-            z-index: 1; /* 确保头像显示在背景之上 */
-            margin-bottom: 10px; 
+            margin-top: 7.5vh; /* 使用视口单位 */
+            z-index: 1;
+            margin-bottom: 10px;
         }
 
         
 
+        .header1, .header2 {
+            font-family: 'Arial', serif;
+            color: hwb(43 35% 3% / 0.947);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
         .header1 {
+            font-size: 4vw; /* 使用视口单位 */
+            
             margin-top: -50px;
-            font-family: 'Arial', serif; /* 这是一个普遍存在的字体 */
-            font-size: 60px; /* 这是假设的尺寸，根据需要调整 */
-            font-weight: bold; /* 粗体 */
-            color: hwb(43 35% 3% / 0.947); 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文本阴影效果 */
         }
 
         .header2 {
+            font-size: 2.5vw; /* 使用视口单位 */
+            
             margin-top: -50px;
             padding-top: 10px;
-            font-family: 'Arial', serif; /* 这是一个普遍存在的字体 */
-            font-size: 34px; 
-            
-            color: hwb(43 35% 3% / 0.947); 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 文本阴影效果 */
         }
 
         .footer {
-            margin-top: 200px;
-            font-family: 'Pacifico', cursive; /* 另一个常见的网页字体 */
-            font-size: 30px; /* 这是假设的尺寸，根据需要调整 */
-            font-weight: normal; /* 正常字重 */
-            color: #61d8ff; 
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* 较轻的文本阴影效果 */
-
+            font-family: 'Pacifico', cursive;
+            font-size: 2vw; /* 使用视口单位 */
+            
+            margin-top: 10vh; /* 使用视口单位 */
+            color: #61d8ff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
+
         
         
         .articles-section {
