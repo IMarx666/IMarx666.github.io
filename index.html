@@ -22,16 +22,38 @@
 
         /* 为小屏幕设备设置字体大小 */
         @media screen and (max-width: 767px) {
-            .header1 {
-                font-size: 5vw; /* 调整小屏幕的字体大小 */
-            }
-            .header2 {
-                font-size: 3vw; /* 调整小屏幕的字体大小 */
-            }
-            .footer {
-                font-size: 2.5vw; /* 调整小屏幕的字体大小 */
-            }
-        }
+    .profile-pic {
+        width: 80px; /* 在小屏幕上进一步减小尺寸 */
+        height: 80px; /* 在小屏幕上进一步减小尺寸 */
+        margin-top: 3vh; /* 在小屏幕上进一步减少外边距 */
+        margin-bottom: 3vh; /* 在小屏幕上进一步减少外边距 */
+    }
+}
+
+
+        /* 应用于所有元素，确保最大宽度不超过视口宽度 */
+* {
+    max-width: 100%;
+    box-sizing: border-box; /* 防止内边距和边框导致的额外宽度 */
+}
+
+/* 特别针对 <img> 标签，确保图片响应式缩放 */
+img {
+    max-width: 100%;
+    height: auto; /* 保持图片原始宽高比 */
+}
+
+/* 背景图片容器的响应式设计 */
+.profile-pic, .hero-section {
+    background-size: cover; /* 背景图片覆盖整个容器，保持其宽高比 */
+    background-position: center; /* 背景图片居中显示 */
+}
+
+/* 文章和英雄区域的宽度控制 */
+.article, .hero-section {
+    width: 100%; /* 使宽度自动适应父容器宽度 */
+    overflow: hidden; /* 隐藏超出容器部分的内容 */
+}
 
 
         body, html {
@@ -54,22 +76,19 @@
             align-items: center;
             text-align: center;
             color: white;
+            margin-bottom: 10vh;
         }
 
         .profile-pic {
-            width: 20vw; /* 使用视口单位 */
-            height: 20vh; /* 使用视口单位 */
-            max-width: 120px; /* 限制最大宽度 */
-            max-height: 120px; /* 限制最大高度 */
-            min-width: 60px; /* 限制最小宽度 */
-            min-height: 60px; /* 限制最小高度 */
-            border-radius: 50%;
-            background: url('images/head.jpg') no-repeat center;
-            background-size: cover;
-            margin-top: 10vh; /* 使用视口单位 */
-            z-index: 1;
-            margin-bottom: 10vh;
-        }
+    width: 120px; /* 设置一个固定的宽度 */
+    height: 120px; /* 设置一个固定的高度 */
+    border-radius: 50%;
+    background: url('images/head.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+    margin-top: 5vh; /* 减少外边距以适应小屏幕 */
+    margin-bottom: 5vh; /* 减少外边距以适应小屏幕 */
+}
 
         
 
@@ -115,13 +134,16 @@
         }
         .sidebar {
             position: fixed;
-            top: 100vh; /* Start at the bottom of the hero section */
+            top: 0; /* 调整为顶部 */
             right: 0;
             width: 200px;
             background: white;
             padding: 20px;
             box-shadow: -2px 0 4px rgba(0,0,0,0.1);
+            max-height: 100vh; /* 限制最大高度 */
+            overflow-y: auto; /* 如果内容超出高度，则允许垂直滚动 */
         }
+
         /* 剩余的样式 */
     </style>
 </head>
