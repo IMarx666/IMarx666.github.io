@@ -11,6 +11,18 @@
             scroll-behavior: smooth;
         }
         /* 样式设置 */
+
+        .profile-pic {
+            width: 120px; /* 调整为所需尺寸 */
+            height: 120px;
+            border-radius: 50%;
+            background: url('images/head.jpg') no-repeat center;
+            background-size: cover;
+            border: 3px solid white; /* 可选：为头像添加边框 */
+            margin-top: -60px; /* 使头像部分显示在背景区域上方 */
+            z-index: 1; /* 确保头像显示在背景之上 */
+        }
+
         .hero-section {
             background: linear-gradient(
                 rgba(0, 0, 0, 0.5), /* 黑色半透明覆盖 */
@@ -53,12 +65,26 @@
 </head>
 <body>
 
-<div class="hero-section">
-    <div class="profile-pic"></div>
+
+<div class="bg">
+    <div class="profile-pic">
+
+    </div>
     <h1>Alex的小站</h1>
     <p>这里是关于我的故事，我的旅程和未来的梦想</p>
     <p>历史是一面镜子，反射出每个人生命中的每一次抉择与行动。</p>
-    <!-- 其他元素，比如社交媒体图标等 -->
+    <div class="social-media-icons">
+        <!-- Insert your social media icons here -->
+    </div>
+    <div class="menu-buttons">
+        <!-- Insert your menu buttons here -->
+    </div>
+    <div class="footer">
+        <p>“大家，此夜如何？”</p>
+        <p>“蓝蓝的天，橘橘的”</p>
+        <p>“每一次不同……”</p>
+        <p>“但一次不同”</p>
+    </div>
 </div>
 
 <div class="articles-section">
