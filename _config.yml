@@ -121,7 +121,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -130,11 +130,13 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    clientID    : 1d75c583482a47db6c57 # GitHub Application Client ID
+    clientSecret: 91a453eb84b6f1abe3ce4bd838342aa9c8d2ed36 # GitHub Application Client Secret
+    repository  : comment # GitHub repo
+    owner       : IMarx666 # GitHub repo owner
+    admin: 
+        - IMarx666
+    # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
   ## Valine
@@ -150,13 +152,13 @@ comments:
 ## => Pageview
 ##############################
 pageview:
-  provider: false # false (default), "leancloud", "custom"
+  provider: leancloud # false (default), "leancloud", "custom"
 
   ## Leancloud
   leancloud:
-    app_id    : # LeanCloud App id
-    app_key   : # LeanCloud App key
-    app_class : # LeanCloud App class
+    app_id    : G7WJLU7NjJxDaeCVBqyLpNF2-gzGzoHsz # LeanCloud App id
+    app_key   : B9455Z9Ay3F3rd5GhlJ3lHep # LeanCloud App key
+    app_class : hello # LeanCloud App class
 
 
 ## => Search
@@ -166,7 +168,7 @@ search:
 
   ## Google Custom Search Engine
   google:
-    custom_search_engine_id: # Google Custom Search Engine ID
+    custom_search_engine_id: b609fb0815c844aef # Google Custom Search Engine ID
 
 
 ## => Analytics
