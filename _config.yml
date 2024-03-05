@@ -132,7 +132,7 @@ comments:
   gitalk:
     clientID    : 1d75c583482a47db6c57 # GitHub Application Client ID
     clientSecret: 91a453eb84b6f1abe3ce4bd838342aa9c8d2ed36 # GitHub Application Client Secret
-    repository  : github.io # GitHub repo
+    repository  : IMarx666.github.io # GitHub repo
     owner       : IMarx666 # GitHub repo owner
     admin: 
         - IMarx666
